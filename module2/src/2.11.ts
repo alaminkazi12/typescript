@@ -47,7 +47,7 @@
     d: "5",
   };
 
-  type EmptyObje = Record<string, unknown> = {};
+  const EmptyObj: Record<string, unknown> = {};
 
   //
 }
