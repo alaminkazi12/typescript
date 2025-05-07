@@ -1,6 +1,27 @@
 {
   //
   // asynchronous typescript
+
+  type User = {
+    userId: number;
+    id: number;
+    title: string;
+    completed: boolean;
+  };
+
+  const getTodo = async (): Promise<User> => {
+    const response = await fetch(
+      "https://jsonplaceholder.typicode.com/todos/1"
+    );
+
+    const data: User = await response.json();
+
+    console.log(data);
+    return data;
+  };
+
+  getTodo();
+
   // basic promise
 
   const createPromise = (): Promise<string> => {
