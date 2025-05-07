@@ -21,6 +21,7 @@
   //     width: string;
   //   };
 
+  //   lookup
   type AreaString<T> = {
     [key in keyof T]: T[key];
   };
