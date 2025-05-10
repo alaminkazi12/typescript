@@ -53,10 +53,30 @@
 
   class Rectangle extends Shape {
     height: number;
-    weight: number;
+    width: number;
 
-    constructor() {}
+    constructor(height: number, width: number) {
+      super();
+      this.height = height;
+      this.width = width;
+    }
+
+    getArea(): number {
+      return this.height * this.width;
+    }
   }
+
+  const getShapeArea = (parm: Shape) => {
+    console.log(parm.getArea());
+  };
+
+  const Shape1 = new Shape();
+  const Shape2 = new Chircle(10);
+  const Shape3 = new Rectangle(10, 20);
+
+  getShapeArea(Shape1);
+  getShapeArea(Shape2);
+  getShapeArea(Shape3);
 
   //
 }
